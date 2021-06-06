@@ -4,7 +4,7 @@
 * open command prompt and go to your folder in which you want to create project
 * write the following line :  ``` npm init``` this will create package.json file
 * once its created then write : ```npm install lite-server --save-dev```
-* Next, open package.json in your editor and modify it as shown below. Note the addition of two lines, ```start:"npm run lite``` and ```lite:"lite-server```
+* Next, open package.json in your editor and modify it as shown below. Note the addition of two lines, ```"start":"npm run lite"``` and ```"lite":"lite-server"```
 ```{
   "name": "  ",
   "version": "1.0.0",
