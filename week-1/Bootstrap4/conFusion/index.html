@@ -162,7 +162,7 @@
             </div>
         </div>
     </header>
-
+  
     <div class="row row-content"><!--carousel-->
         <div class="col">
             <div id="mycarousel" class="carousel slide" data-ride="carousel">
@@ -212,15 +212,19 @@
                 </a>
                 <div class="btn-group" id="carouselButton">
                     <button class="btn btn-danger btn-sm" id="carousel-pause">
-                	    <span class="fa fa-pause"></span>
+                        <span class="fa fa-pause"></span>
                     </button>
                     <button class="btn btn-danger btn-sm" id="carousel-play">
-                	    <span class="fa fa-play"></span>
+                        <span class="fa fa-play"></span>
                     </button>
                 </div>
             </div>
+           
          </div>
-    </div>
+
+    </div><!--carousel-->
+
+
 
 
     <div class="container">
@@ -327,10 +331,12 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!--carousel-->
     <script>
         $(document).ready(function(){
-            $("#mycarousel").carousel( { interval: 20 } );
-            $("#carousel-pause").click(function(){
+            $("#mycarousel").carousel( { interval: 20, pause:'false'}, );
+            $("#carousel-pause").on('click',function(e){
+                e.preventDefault();
                 $("#mycarousel").carousel('pause');
             });
             $("#carousel-play").click(function(){
@@ -338,6 +344,7 @@
             });
         });
     </script>
+<!--carousel-->
     </footer>
 
 </body>
